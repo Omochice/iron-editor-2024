@@ -12,7 +12,6 @@ export const main: Entrypoint = (denops) => {
       const info = await open(denops, "answer1", {
         opener: "split",
       });
-      console.log(info)
       await setbufvar(denops, info.bufnr, "&buftype", "nofile");
       await setbufline(denops, info.bufnr, 1, extractParticipante(lines));
     },
