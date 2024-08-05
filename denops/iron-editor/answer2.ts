@@ -140,14 +140,16 @@ function mapCommentLines(lines: readonly string[]): TblsObject {
  * `.trim()
  * convertPrismaSchemaToTblsObject(file.split("\n"))
  * // => {
- *   table: "Account",
- *   tableComment: "アカウント",
- *   columnComments: {
- *     id: "ユーザーID",
- *     userId: "ユーザーID",
- *     type: "タイプ",
- *     refresh_token: "リフレッシュトークン",
- *   },
+ *   comments: [
+ *     table: "Account",
+ *     tableComment: "アカウント",
+ *     columnComments: {
+ *       id: "ユーザーID",
+ *       userId: "ユーザーID",
+ *       type: "タイプ",
+ *       refresh_token: "リフレッシュトークン",
+ *     },
+ *   ],
  * }
  */
 export function convertPrismaSchemaToTblsObject(
